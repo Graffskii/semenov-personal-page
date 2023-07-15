@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = 5000;
 
-const sequelize = require('./db.js')
+// const sequelize = require('./db.js')
 
 const models = require('./models/models.js')
 
@@ -19,9 +19,9 @@ app.use('/api', router)
 
 const start = async () => {
     try {
-      await sequelize.authenticate();
-      await sequelize.sync();
-      console.log('Подключение к базе данных установлено.');
+      // await sequelize.authenticate();
+      // await sequelize.sync();
+      // console.log('Подключение к базе данных установлено.');
       app.listen(port, () => {
         console.log(`Example app listening at http://localhost:${port}`);
     });
