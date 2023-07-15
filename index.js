@@ -11,9 +11,12 @@ const cors = require('cors')
 
 const router = require('./routes/index.js')
 
+const path = require('path')
+
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static(path.resolve(__dirname, 'static')))
 
 app.use('/api', router)
 
