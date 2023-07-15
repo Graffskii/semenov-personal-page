@@ -13,14 +13,14 @@ const transporter = nodemailer.createTransport({
 
 class mailerController {
     async send(req, res) {
-        const {email, subject, text} = req.body
+        const {name, email, text} = req.body
 
         console.log(req.body)
 
         let result = await transporter.sendMail({
             from: '"Leonid" <ivanovpostman1991@outlook.com>',
             to: email,
-            subject: subject,
+            subject: name,
             text: text,
         });
         
