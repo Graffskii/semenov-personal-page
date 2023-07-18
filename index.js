@@ -13,10 +13,13 @@ const router = require('./routes/index.js')
 
 const path = require('path')
 
+const fileupload = require('express-fileupload')
+
 
 app.use(cors())
 app.use(express.json())
 app.use(express.static(path.resolve(__dirname, 'static')))
+app.use(fileupload())
 
 app.use('/api', router)
 

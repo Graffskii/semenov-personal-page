@@ -1,5 +1,7 @@
 // const {Article} = require('../models/models')
 const dict = require('../dict/dict')
+const path = require('path')
+const uuid = require('uuid')
 
 class articleController { 
     async getOne(req, res) {
@@ -79,9 +81,28 @@ class articleController {
     }
 
     async create(req, res) {
-        const {title, content} = req.body
+        const {title_ru, content_ru, title_en, content_en, source, date} = req.body
+        const {img} = req.files // добавлять картинку обязательно
+
+        let fileName = uuid.v4() + ".jpg"
+        img.mv(path.resolve(__dirname, '..', 'static', fileName))
+
+        let id = dict.length + 1
+        const article = {
+            id,
+            title_ru: title_ru || " " ,
+            content_ru: content_ru || " ",
+            title_en: title_en || " " ,
+            content_en: content_en || " ",
+            img: fileName, 
+            source, 
+            date
+        }
+
+        dict.push(article)
+
         console.log(req.body)
-        return res.json({title, content})
+        return res.json(dict)
     } 
 
 }
