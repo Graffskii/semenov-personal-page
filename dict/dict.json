@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title_ru": "Заголовок",
+    "content_ru": "Текст статьи",
+    "title_en": "Title",
+    "content_en": "Content of article",
+    "img": "avatarko-anonim.jpg",
+    "source": "link",
+    "date": "14-11-2001"
+  },
+  {
+    "id": 2,
+    "title_ru": "Заголовок2",
+    "content_ru": "Текст статьи2",
+    "title_en": "Title2",
+    "content_en": "Content of article2",
+    "img": "avatarko-anonim.jpg",
+    "source": "link2",
+    "date": "14-11-2002"
+  },
+  {
+    "id": 3,
+    "title_ru": "Птицы сибири",
+    "content_ru": "В сибири есть птицы с крыльями",
+    "title_en": "Siberia birds",
+    "content_en": "There are birds with wings in siberia",
+    "img": "zanashih.jpg",
+    "source": "link",
+    "date": "13-11-2002"
+  }
+]

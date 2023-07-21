@@ -2,6 +2,7 @@
 const dict = require('../dict/dict')
 const path = require('path')
 const uuid = require('uuid')
+const fs = require('fs')
 
 class articleController { 
     async getOne(req, res) {
@@ -84,6 +85,11 @@ class articleController {
         const {title_ru, content_ru, title_en, content_en, source, date} = req.body
         const {img} = req.files // добавлять картинку обязательно
 
+        const dbPath = path.resolve(__dirname, '..', 'dict', 'dict.json')
+        console.log(dbPath)
+        let data = fs.readFileSync(dbPath, "utf-8")
+        const articles = JSON.parse(data)
+
         let fileName = uuid.v4() + ".jpg"
         img.mv(path.resolve(__dirname, '..', 'static', fileName))
 
@@ -99,7 +105,9 @@ class articleController {
             date
         }
 
-        dict.push(article)
+        articles.push(article)
+        data = JSON.stringify(articles, null, 2)
+        fs.writeFileSync(dbPath, data)
 
         console.log(req.body)
         return res.json(dict)
