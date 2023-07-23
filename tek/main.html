@@ -14,8 +14,8 @@
       <div class="logo">
         <h1><a href="main.html">MikhailSemenov</a></h1>
       </div>
-      <div id="navbtn" class="navbuttons"><a href="#">Статьи</a> <a href="project.html">Проекты</a></div>
-      <div class="set-language"><button>EN</button></div>
+      <div id="navbtn" class="navbuttons"><a href="articles.html" class="artcl-href">Статьи</a> <a href="project.html"class="proj-href">Проекты</a></div>
+      <div class="set-language"><button id="changeLang">EN</button></div>
       <div class="select">☰</div>
     </header>
 
@@ -23,7 +23,7 @@
       <div class="greeting">
         <div class="greeting__text">
           <h1 class="greeting__h1">Официальный сайт Семёнова Михаила</h1>
-          <h2 class="greeting__h2">Заместитель генерального директора по информационного технологиям</h2>
+          <h2 class="greeting__h2">Заместитель генерального директора по информационным технологиям</h2>
         </div>
         <picture class="greeting__img">
           <source srcset="picture/михвил1.png" media="(max-width: 920px)" >
@@ -47,11 +47,11 @@
         <div class="contact__form">
           <h2 class="contact__title">Контакты</h2>
           <form action="">
-            <input type="text" placeholder="Введите имя">
-            <input type="text" placeholder="Введите почту">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Введите текст" 
+            <input class="inputName" type="text" placeholder="Введите имя">
+            <input class="inputEmail" type="text" placeholder="Введите почту">
+            <textarea class="inputText" name="" id="" cols="30" rows="10" placeholder="Введите текст" 
             style="resize:none;"></textarea>
-            <button>Отправить</button>
+            <button class="send">Отправить</button>
           </form>
         </div>
 
@@ -89,5 +89,8 @@
     </footer>
 
     <script src="js/navbar.js"></script>
+	<script src="js/languages.js"></script>
+	<script src="js/translation.js"></script>
   </body>
 </html>
+
