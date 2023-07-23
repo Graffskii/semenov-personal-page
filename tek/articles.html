@@ -12,33 +12,33 @@
 	<link rel="stylesheet" href="css/articles.css" />
   </head>
   <body>
-      <header>
+    <header>
       <div class="logo">
         <h1><a href="main.html">MikhailSemenov</a></h1>
       </div>
-      <div id="navbtn" class="navbuttons"><a href="#">Статьи</a> <a href="project.html">Проекты</a></div>
-      <div class="set-language"><button>EN</button></div>
+      <div id="navbtn" class="navbuttons"><a href="articles.html" class="artcl-href">Статьи</a> <a href="project.html"class="proj-href">Проекты</a></div>
+      <div class="set-language"><button id="changeLang">EN</button></div>
       <div class="select">☰</div>
     </header>
 
-<h2>Статьи</h2>
+<h2 class="artcl-page-title">Статьи</h2>
 <section class="artcl-container">
-    <article class="artcl-item">
-        <div class="artcl-image">
-            <img src="123.png" />
-	    <h3>Название статьи<br><small>01.12.23</small></h3>
+    <article id="artcl1"  class="artcl-item">
+        <div id="artcl1" class="artcl-image">
+            <img src="picture/123.png" />
+	    <h3 id="artcl1">Название статьи<br><small id="artcl1">01.12.23</small></h3>
         </div>
 		
-        <div class="artcl-info">
-            <div class="artcl-info-text">
-                <p>С учётом сложившейся международной обстановки, сплочённость команды профессионалов играет 
+        <div id="artcl1" class="artcl-info">
+            <div id="artcl1" class="artcl-info-text">
+                <p id="artcl1"> С учётом сложившейся международной обстановки, сплочённость команды профессионалов играет 
 		важную роль в формировании системы массового участия.
 		Учитывая ключевые сценарии поведения, социально-экономическое.Понятие «содержание высказывания»
 		связано с категорией информативности речи и присуще только тексту. Оно сообщает читателю
 		индивидуально-авторское понимание отношений между явлениями, их значимости во всех сферах придают
 		ему смысловую цельность.
 		</p>
-		<a class="continue-btn" href="#link">Читать далее</a>
+		<a id="artcl1" class="continue-btn" href="#link">Читать далее</a>
             </div>
         </div>
     </article>
@@ -47,7 +47,7 @@
      
   <article class="artcl-item">
         <div class="artcl-image">
-            <img src="456.jpg" />
+            <img src="picture/456.jpg" />
 	    <h3>Название статьи<br><small>01.12.23</small></h3>
         </div>
 		
@@ -67,7 +67,7 @@
 	
  <article class="artcl-item">
         <div class="artcl-image">
-            <img src="789.jpg" />
+            <img src="picture/789.jpg" />
 	    <h3>Название статьи<br><small>01.12.23</small></h3>
         </div>
 		
@@ -100,6 +100,9 @@
     </footer>
 
     <script src="js/navbar.js"></script>
-    <script src="js/navigation-project.js"></script>
+	<script src="js/navigation-articles.js"></script>
+	<script src="js/languages.js"></script>
+	<script src="js/translation.js"></script>
+	
   </body>
 </html>
