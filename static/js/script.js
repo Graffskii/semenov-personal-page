@@ -66,6 +66,8 @@ document.getElementById('editForm').addEventListener('submit', async function (e
         if (response.ok) {
             setTimeout(fetchRecords, 1000); // Обновляем список записей после успешного редактирования
             cancelEdit(); // Отменяем редактирование
+        } else {
+            window.location.href = 'http://localhost:5000/api/auth/login-page'
         }
     })
     .catch((error) => console.error("Ошибка при отправке данных:", error));
@@ -84,6 +86,8 @@ document.getElementById('createForm').addEventListener('submit', async function 
         if (response.ok) {
             setTimeout(fetchRecords, 1000);; // Обновляем список записей после успешного редактирования
             cancelCreate(); // Отменяем редактирование
+        } else {
+            window.location.href = 'http://localhost:5000/api/auth/login-page'
         }
     })
     .catch((error) => console.error("Ошибка при отправке данных:", error));
@@ -128,6 +132,8 @@ function deleteRecord(id) {
     .then((response) => {
         if (response.ok) {
             setTimeout(fetchRecords, 1000); // Обновляем список записей после успешного редактирования
+        } else {
+            window.location.href = 'http://localhost:5000/api/auth/login-page'
         }
     })
     .catch((error) => console.error("Ошибка при отправке данных:", error));

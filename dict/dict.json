@@ -18,5 +18,15 @@
     "img": "126cf0c5-c947-49aa-84d7-7fd5069630e2.jpg",
     "source": "link2321",
     "date": "14-11-2002"
+  },
+  {
+    "id": 3,
+    "title_ru": "Птицы сибири",
+    "content_ru": "В сибири есть птицы с крыльями",
+    "title_en": "Siberia birds",
+    "content_en": "There are birds with wings in siberia",
+    "img": "cc3d6b49-e970-43ee-b04b-a0d47218b7f6.jpg",
+    "source": "link",
+    "date": "13-11-2002"
   }
 ]

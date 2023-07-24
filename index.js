@@ -15,10 +15,14 @@ const path = require('path')
 
 const fileupload = require('express-fileupload')
 
+const cookieParser = require('cookie-parser')
+
 
 app.use(cors())
-app.use(express.json())
 app.use(express.static(path.resolve(__dirname, 'static')))
+app.use(express.json())
+
+app.use(cookieParser())
 app.use(fileupload())
 
 app.use('/api', router)
