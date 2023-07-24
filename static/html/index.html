@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Простая админ-панель CRUD</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <h1>Простая админ-панель CRUD</h1>
+    <h2>Список записей</h2>
+    <table id="recordTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>title_ru</th>
+                <th>content_ru</th>
+                <th>title_en</th>
+                <th>content_en</th>
+                <th>img</th>
+                <th>source</th>
+                <th>date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Здесь будет выводиться список записей -->
+            <tr>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Создание записи</h2>
+    <form id="createForm">
+        <label for="title_ru">title_ru:</label>
+        <input type="text" id="title_ru" name="title_ru" >
+        <label for="content_ru">content_ru:</label>
+        <input type="text" id="content_ru" name="content_ru" >
+        <label for="title_en">title_en:</label>
+        <input type="text" id="title_en" name="title_en" >
+        <label for="content_en">content_en</label>
+        <input type="text" id="content_en" name="content_en" >
+        <label for="img">img:</label>
+        <input type="file" id="img" name="img" required>
+        <label for="source">source:</label>
+        <input type="text" id="source" name="source">
+        <label for="date">date:</label>
+        <input type="text" id="date" name="date">
+        <button type="submit">Создать</button>
+    </form>
+
+    <h2>Редактирование записи</h2>
+    <form id="editForm">
+        <input type="hidden" id="id" name="id"> <!-- Скрытое поле для хранения ID редактируемой записи -->
+        <label for="title_ru_edit">title_ru:</label>
+        <input type="text" id="title_ru_edit" name="title_ru" >
+        <label for="content_ru_edit">content_ru:</label>
+        <input type="text" id="content_ru_edit" name="content_ru" >
+        <label for="title_en_edit">title_en:</label>
+        <input type="text" id="title_en_edit" name="title_en" >
+        <label for="content_en_edit">content_en:</label>
+        <input type="text" id="content_en_edit" name="content_en" >
+        <label for="img_edit">img:</label>
+        <input type="file" id="img_edit" name="img" required>
+        <label for="source_edit">source:</label>
+        <input type="text" id="source_edit" name="source">
+        <label for="date_edit">date:</label>
+        <input type="text" id="date_edit" name="date">
+        <button type="submit">Сохранить</button>
+        <button type="button" onclick="cancelEdit()">Отменить</button>
+    </form>
+    </body>
+
+    <script src="../js/script.js">
+
+    </script>
+</html>

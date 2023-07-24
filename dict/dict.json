@@ -12,21 +12,11 @@
   {
     "id": 2,
     "title_ru": "Заголовок2",
-    "content_ru": "Текст статьи2",
+    "content_ru": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
     "title_en": "Title2",
     "content_en": "Content of article2",
-    "img": "avatarko-anonim.jpg",
-    "source": "link2",
+    "img": "126cf0c5-c947-49aa-84d7-7fd5069630e2.jpg",
+    "source": "link2321",
     "date": "14-11-2002"
-  },
-  {
-    "id": 3,
-    "title_ru": "Птицы сибири",
-    "content_ru": "В сибири есть птицы с крыльями",
-    "title_en": "Siberia birds",
-    "content_en": "There are birds with wings in siberia",
-    "img": "zanashih.jpg",
-    "source": "link",
-    "date": "13-11-2002"
   }
 ]

@@ -34,6 +34,9 @@ class articleController {
                 console.log(itemEn)
             }
             return res.json(itemEn)
+        } else {
+            const item = dict.find(item => item.id == id)
+            return res.json(item)
         }
         
     }
@@ -76,6 +79,8 @@ class articleController {
             const articles = dictEn
             
             return res.json(articles)
+        }  else {
+            return res.json(dict)
         }
         
         
@@ -91,9 +96,16 @@ class articleController {
         const articles = JSON.parse(data)
 
         let fileName = uuid.v4() + ".jpg"
-        img.mv(path.resolve(__dirname, '..', 'static', fileName))
+        img.mv(path.resolve(__dirname, '..', 'static', 'img', fileName))
 
-        let id = dict.length + 1
+        
+
+        const max = dict.reduce((prev, current) => {
+            return (prev.id > current.id) ? prev : current;
+        });
+
+        let id = max.id + 1
+
         const article = {
             id,
             title_ru: title_ru || " " ,
@@ -112,6 +124,60 @@ class articleController {
         console.log(req.body)
         return res.json(dict)
     } 
+
+    async update(req, res) {
+        const {id, title_ru, content_ru, title_en, content_en, source, date} = req.body
+        const {img} = req.files // добавлять картинку обязательно
+        const idInt = Number(id)
+
+        console.log(img)
+
+
+        const dbPath = path.resolve(__dirname, '..', 'dict', 'dict.json')
+        console.log(dbPath)
+        let data = fs.readFileSync(dbPath, "utf-8")
+        const articles = JSON.parse(data)
+
+        let fileName = uuid.v4() + ".jpg"
+        img.mv(path.resolve(__dirname, '..', 'static', 'img', fileName))
+
+        articles.pop()
+
+        const article = {
+            id: idInt,
+            title_ru: title_ru || " " ,
+            content_ru: content_ru || " ",
+            title_en: title_en || " " ,
+            content_en: content_en || " ",
+            img: fileName, 
+            source, 
+            date
+        }
+
+        articles.push(article)
+        data = JSON.stringify(articles, null, 2)
+        fs.writeFileSync(dbPath, data)
+
+        console.log(req.body)
+        return res.json(dict)
+    }
+
+    async delete(req, res) {
+        const {id} = req.body
+
+        const dbPath = path.resolve(__dirname, '..', 'dict', 'dict.json')
+        console.log(dbPath)
+        let data = fs.readFileSync(dbPath, "utf-8")
+        const articles = JSON.parse(data)
+
+        const articlesUpt = articles.filter(item => item.id !== Number(id))
+
+        data = JSON.stringify(articlesUpt, null, 2)
+        fs.writeFileSync(dbPath, data)
+
+        console.log(req.body)
+        return res.json(dict)
+    }
 
 }
 
