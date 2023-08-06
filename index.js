@@ -25,6 +25,26 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(fileupload())
 
+app.use('/articles', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static', 'html', "articles.html"))
+})
+
+app.use('/check-project', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static', 'html', "check-project.html"))
+})
+
+app.use('/main', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static', 'html', "main.html"))
+})
+
+app.use('/project', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static', 'html', "project.html"))
+})
+
+app.use('/read-article', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static', 'html', "read-article.html"))
+})
+
 app.use('/api', router)
 
 const start = async () => {

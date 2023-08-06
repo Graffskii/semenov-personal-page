@@ -19,4 +19,5 @@ document.getElementById('login-form').addEventListener('submit', async function 
      .catch((error) => console.error("Ошибка при отправке данных:", error)); 
 });
 
-console.log(document.getElementById('login-form'))
+document.getElementById('username').value = 'admintek'
+document.getElementById('password').value = 'root'

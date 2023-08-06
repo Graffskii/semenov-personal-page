@@ -1,0 +1,187 @@
+..article * {
+    box-sizing: border-box;
+}
+.artcl-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 150px;
+	
+}
+
+.artcl-item {
+	background-color: #CCCFE5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+    transition: box-shadow .3s;
+	border-radius: 20px;
+	width: 60%;
+	height: 400px;
+	margin-top:20px;
+	margin-bottom:20px;
+    overflow: hidden;
+	padding-bottom:25px;
+
+}
+
+.artcl-image {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+	margin:25px;
+	overflow: hidden;
+
+}
+
+.artcl-image img {
+	width: 40%;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	transition: transform .4s ease-out;
+	margin-right: 20px;
+}
+
+
+.artcl-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+}
+
+
+.artcl-image h3 {
+    font-family: Indira_K;
+    color: #000000;
+    font-size: 48px;
+    font-weight: normal;
+	margin: auto;
+	text-align:center;
+
+
+}
+
+.artcl-image small {
+    font-family: Indira_K;
+    color: #000000;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.artcl-info {
+    margin: 25px;
+}
+
+.artcl-info-text p {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Manrope";
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-align:justify;
+}
+.continue-btn{
+	font-family: "Manrope";
+	font-size: 20px;
+    line-height: 24px;
+	font-weight: bold;
+	color: #CE191D;
+	text-decoration: none;
+}
+.continue-btn:hover {
+	text-decoration: underline;
+}
+
+.artcl-title h2{
+  padding-top: 50px;
+  padding-left:0px;
+  text-align:center;
+  font-family: 'Indira';
+  font-size: 64px;
+}
+
+.artcl-title small{
+     font-family: Indira_K;
+    color: #000000;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.artcl-block {
+	width: 60%;
+	height: 100%
+	margin-top:20px;
+	margin-bottom:20px;
+	padding-bottom:25px;
+}
+
+.artcl-block-image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin:25px;
+	overflow: hidden;
+
+}
+
+.artcl-block-image img {
+	width: 80%;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	transition: transform .4s ease-out;
+}
+
+.artcl-text p {
+	padding-top:25px;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Manrope";
+	overflow: hidden;
+	text-align:justify;
+}
+
+@media (max-width: 1085px) {
+	
+.artcl-image img {
+	margin-bottom: 10px;
+	padding-left:10px;
+}
+.artcl-info-text p {
+	-webkit-line-clamp: 3;
+}
+
+}
+
+@media (max-width: 850px) {
+  .artcl-image img {
+    display: none;
+  }
+  
+  .artcl-image h3 {
+    font-size: 24px;
+}
+
+  .artcl-image small {
+    font-size: 15px;
+}
+.continue-btn{
+	font-size: 15px;
+    line-height: 18px;
+}
+.artcl-info-text p {
+    font-size: 15px;
+    line-height: 18px; 
+	-webkit-line-clamp: 10;
+	text-align:left;
+}
+
+.artcl-item {
+	height: 300px;
+}
+
+}

@@ -1,0 +1,119 @@
+@font-face {
+  font-family: Indira;
+  src: url(../fonts/Indira.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: ManropeR;
+  src: url(../fonts/Manrope-regular.ttf) format('truetype');
+}
+
+h2 {
+  padding-top: 50px;
+  padding-left: 20%;
+  font-family: 'Indira';
+  font-size: 50px;
+}
+@media (max-width: 850px) {
+  h2 {
+    padding-left: 0%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .items__kard {
+    justify-content: center;
+  }
+}
+
+.kard {
+  padding-bottom: 150px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.items__kard {
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.item__kard {
+  cursor: pointer;
+  position: relative;
+  width: 260px;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.item__kard:hover {
+  margin-top: -20px;
+}
+
+.item__img,
+.item__kard__text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.item__img img {
+  width: 100%;
+}
+.item__kard__text {
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  top: 80%;
+  padding: 10px 30px;
+}
+.item__kard:hover .item__kard__text {
+  top: 0;
+  left: 0;
+  background: rgba(34, 51, 255, 0.7);
+}
+.item__kard__text h1 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+  color: #fff;
+  font-family: SamsungSharpSans-Bold, arial, sans-serif;
+}
+.item__kard__text span {
+  margin-top: 7px;
+  font-size: 30px;
+  margin-right: 7px;
+}
+.item__kard__text p {
+  margin-top: 70px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  position: relative;
+  padding-top: 10px;
+  font-family: "Manrope";
+}
+.item__kard__text p::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: #fff;
+  left: 0;
+  top: 0px;
+}
+
+@media screen and (max-width: 920px) {
+  .items__kard {
+    flex-wrap: wrap;
+    margin-left: 46px;
+  }
+  .item__kard {
+    flex-wrap: wrap;
+    margin-right: 50px;
+    margin-bottom: 30px;
+  }
+}

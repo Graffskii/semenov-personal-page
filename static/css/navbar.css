@@ -1,0 +1,134 @@
+@font-face {
+  font-family: GranaPadano;
+  src: url(../fonts/GranaPadano.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: ManropeR;
+  src: url(../fonts/Manrope-regular.ttf) format('truetype');
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #051075;
+  color: #fff;
+}
+
+.logo {
+  margin-left: 20%;
+  cursor: pointer;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 35px;
+  font-family: 'GranaPadano';
+  font-weight: 500;
+}
+
+.logo h1 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbuttons {
+  margin-left: 10%;
+  white-space: nowrap;
+}
+
+.navbuttons a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'ManropeR';
+  font-weight: 500;
+}
+
+.navbuttons a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.set-language {
+  width: auto;
+  margin-right: 20%;
+}
+
+.set-language button {
+  font-family: 'ManropeR';
+  height: 35px;
+  width: 95px;
+  background: #929dfb;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.select {
+  font-size: 20px;
+  display: none;
+}
+
+.active {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  display: none;
+  background-color: #051075;
+  font-family: Manrope;
+}
+
+.active a {
+  font-family: Manrope;
+  text-align: center;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 1300px) {
+  .navbuttons {
+    margin-left: 0%;
+  }
+  .navbuttons a {
+    margin-left: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .logo h1 {
+    font-size: 25px;
+  }
+  .navbuttons {
+    display: none;
+  }
+  .set-language button {
+    height: 26px;
+    width: 60px;
+    font-size: 15px;
+  }
+
+  .set-language {
+    margin-right: 0%;
+  }
+  .select {
+    margin-right: 10%;
+    display: block;
+  }
+  .logo {
+    margin-left: 10%;
+  }
+}
