@@ -19,7 +19,7 @@ class mailerController {
 
         let result = await transporter.sendMail({
             from: '"Leonid" <ivanovpostman1991@outlook.com>',
-            to: email,
+            to: 'leon2001nd@gmail.com',
             subject: name,
             text: text,
         });

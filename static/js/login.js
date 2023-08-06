@@ -5,14 +5,14 @@ document.getElementById('login-form').addEventListener('submit', async function 
 
     let formData = new FormData(event.target);
 
-     await fetch(`http://localhost:5000/api/auth`, {
+     await fetch('/api/auth', {
          method: 'POST',
          body: formData
         
      })
     .then((response) => {
         if (response.ok){
-            window.location.href = 'http://localhost:5000/api/admin'
+            window.location.href = '/api/admin'
         }
         console.log(response.body)
     })

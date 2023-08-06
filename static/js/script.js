@@ -24,7 +24,7 @@ function populateTable(articles) {
 
 // Запрос к серверу для получения списка записей
  function fetchRecords() {
-    fetch("http://localhost:5000/api/article") // Замените URL на свой реальный адрес API
+    fetch("/api/article") // Замените URL на свой реальный адрес API
     .then((response) => response.json())
     .then((data) => populateTable(data))
     .catch((error) => console.error("Ошибка при запросе:", error));
@@ -38,7 +38,7 @@ fetchRecords()
 
 function editRecord(id) {
     // Получаем данные записи по ее ID с сервера
-    fetch(`http://localhost:5000/api/article/${id}`)
+    fetch(`/api/article/${id}`)
         .then((response) => response.json())
         .then((record) => {
             document.getElementById('id').value = id;
@@ -57,7 +57,7 @@ document.getElementById('editForm').addEventListener('submit', async function (e
     event.preventDefault();
     let formData = new FormData(event.target);
 
-    await fetch(`http://localhost:5000/api/article/update`, {
+    await fetch(`/api/article/update`, {
         method: 'POST',
         body: formData
         
@@ -67,7 +67,7 @@ document.getElementById('editForm').addEventListener('submit', async function (e
             setTimeout(fetchRecords, 1000); // Обновляем список записей после успешного редактирования
             cancelEdit(); // Отменяем редактирование
         } else {
-            window.location.href = 'http://localhost:5000/api/auth/login-page'
+            window.location.href = '/api/auth/login-page'
         }
     })
     .catch((error) => console.error("Ошибка при отправке данных:", error));
@@ -77,7 +77,7 @@ document.getElementById('createForm').addEventListener('submit', async function 
     event.preventDefault();
     let formData = new FormData(event.target);
 
-    await fetch(`http://localhost:5000/api/article/post`, {
+    await fetch(`/api/article/post`, {
         method: 'POST',
         body: formData
         
@@ -87,7 +87,7 @@ document.getElementById('createForm').addEventListener('submit', async function 
             setTimeout(fetchRecords, 1000);; // Обновляем список записей после успешного редактирования
             cancelCreate(); // Отменяем редактирование
         } else {
-            window.location.href = 'http://localhost:5000/api/auth/login-page'
+            window.location.href = '/api/auth/login-page'
         }
     })
     .catch((error) => console.error("Ошибка при отправке данных:", error));
@@ -124,7 +124,7 @@ function cancelCreate() {
 function deleteRecord(id) {
     let formData = new FormData()
     formData.append("id", id)
-    fetch(`http://localhost:5000/api/article/delete`, {
+    fetch(`/api/article/delete`, {
         method: 'POST',
         body: formData
         
@@ -133,7 +133,7 @@ function deleteRecord(id) {
         if (response.ok) {
             setTimeout(fetchRecords, 1000); // Обновляем список записей после успешного редактирования
         } else {
-            window.location.href = 'http://localhost:5000/api/auth/login-page'
+            window.location.href = '/api/auth/login-page'
         }
     })
     .catch((error) => console.error("Ошибка при отправке данных:", error));
